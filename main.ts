@@ -18,7 +18,7 @@ let persona9:Professional = new Professional("Juan", 47, "Masculino", 82, 179, "
 //TODOS LOS PROFESSIONALS EN UN ARRAY
 let personaTotal:Professional[] = [persona, persona1, persona2, persona3, persona4, persona5, persona6, persona7, persona8, persona9];
 //LLAMAR A TODAS LAS PERSONAS 
-// console.log(personaTotal.toString())
+console.log(personaTotal.toString())
 
 //MOOVIES
 let moovie1:Movie = new Movie("El Practicante", 2020, "Española", "Thriller");
@@ -73,3 +73,4 @@ moovie4.producer = "Screen Gems";
 moovie4.distributor = "Netflix";
 
 console.log(moovie1.mostrarDatos())
+

@@ -18,7 +18,7 @@ let persona9:Professional = new Professional("Juan", 47, "Masculino", 82, 179, "
 //TODOS LOS PROFESSIONALS EN UN ARRAY
 let personaTotal:Professional[] = [persona, persona1, persona2, persona3, persona4, persona5, persona6, persona7, persona8, persona9];
 //LLAMAR A TODAS LAS PERSONAS 
-console.log(personaTotal.toString())
+// console.log(personaTotal.toString())
 
 //MOOVIES
 let moovie1:Movie = new Movie("El Practicante", 2020, "Española", "Thriller");
@@ -28,6 +28,7 @@ let moovie4:Movie = new Movie("Libranos del Mal", 2014, "Estados Unidos", "Thril
 
 //TODAS LAS MOOVIES EN UN ARRAY
 let moovieTotal:Movie[] = [moovie1, moovie2, moovie3, moovie4]
+let prueba:Imdb = new Imdb (moovieTotal)
 //Actores , 1,3,4,5,6
 //Directores, 0,8
 //GUINISTAS, 2,7
@@ -72,5 +73,18 @@ moovie4.mainCharacterName = "Eric Bana";
 moovie4.producer = "Screen Gems";
 moovie4.distributor = "Netflix";
 
-console.log(moovie1.mostrarDatos())
+// console.log(moovie1.mostrarDatos())
+
+let myJson = JSON.stringify(prueba)
+fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
+    if(err) {console.log("error", err)}
+    else{console.log("Archivo creado papi")};
+})
+
+
+fs.writeFileSync("imdbBBDD.json", myJson);
+
+
+//5th update
+
 

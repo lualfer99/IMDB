@@ -1,0 +1,51 @@
+import { Professional } from "./professional"
+
+export class Movie
+{
+    public title:string
+    public releaseYear:number
+    public actors:Professional[]
+    public nationality:string
+    public director:Professional
+    public writer:Professional
+    public language:string
+    public platform:string
+    public isMCU:boolean
+    public mainCharacterName:string
+    public producer:string
+    public distributor:string
+    public genre:string
+
+    constructor (title:string, releaseYear:number, nationality:string, genre:string)
+    {
+        this.title = title
+        this.releaseYear = releaseYear
+        this.nationality = nationality
+        this.genre = genre
+    }
+
+    public mostrarDatos():string
+    {
+        let actores:string = "";
+        for (let i = 0; i < this.actors.length ;i++)
+        {
+            actores += this.actors[i].name;
+        }
+
+        let datos:string = ("Tittle: " + this.title + 
+                            "\nRelease year: " + this.releaseYear + 
+                            "\nActors: " + actores + 
+                            "\nNationality: " + this.nationality + 
+                            "\nDirector: " + this.director + 
+                            "\nWriter: " + this.writer+ 
+                            "\nLanguage: " + this.language + 
+                            "\nPlatform: " + this.platform + 
+                            "\nIs MCU?: " + this.isMCU + 
+                            "\nMain character name: " + this.mainCharacterName + 
+                            "\nProducer: " + this.producer + 
+                            "\nDistributor: " + this.distributor + 
+                            "\nGenere: " + this.genre);
+        
+        return(datos);
+    }
+};

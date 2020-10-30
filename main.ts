@@ -1,7 +1,7 @@
 import {Professional} from "./professional";
 import { Movie } from "./movie";
 import { Imdb } from "./imdb";
-let fs = require("fs");;
+let fs = require("fs");
 
 
 //PROFESSIONALS
@@ -33,7 +33,7 @@ let prueba:Imdb = new Imdb (moovieTotal)
 //Directores, 0,8
 //GUINISTAS, 2,7
 //RELLENAR DATOS DE MOOVIE 1
-moovie1.actors = [persona1]
+moovie1.actors = [persona2, persona2];
 moovie1.director = persona;
 moovie1.writer = persona7;
 moovie1.language = "Spanish";
@@ -43,7 +43,7 @@ moovie1.mainCharacterName = "Angel";
 moovie1.producer = "Carles Torras";
 moovie1.distributor = "Netflix";
 //RELLENAR DATOS DE MOOVIE 2
-moovie2.actors = [persona3,persona4]
+moovie2.actors = [persona3,persona4];
 moovie2.director = persona;
 moovie2.writer = persona2;
 moovie2.language = "English";
@@ -75,16 +75,31 @@ moovie4.distributor = "Netflix";
 
 // console.log(moovie1.mostrarDatos())
 
-let myJson = JSON.stringify(prueba)
-fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
-    if(err) {console.log("error", err)}
-    else{console.log("Archivo creado papi")};
-})
+// let myJson = JSON.stringify(prueba)
+// fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
+//     if(err) {console.log("error", err)}
+//     else{console.log("Archivo creado papi")};
+// })
 
 
-fs.writeFileSync("imdbBBDD.json", myJson);
+// fs.writeFileSync("imdbBBDD.json", myJson);
 
 
-//5th update
+
+// let prueba2:Imdb = new Imdb ([]);
+
+// fs.readFileSync("imdbBBDD.json", "utf-8", function(err, result) {
+//     if(err) {console.log("error", err)}
+//     else{console.log("Your file has been read!")
+//     prueba2 = JSON.parse(result)};
+//     console.log(prueba2.films[2].title);
+// })
 
 
+
+// prueba.escribirEnFicheroJSON("imdbBBDD.json");
+let object:Imdb = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
+object.obtenerInstanciaIMDB("imdbBBDD.json");
+console.log(object.films[1].title);
+
+// prueba.escribirEnFicheroJSON("hola2.json")

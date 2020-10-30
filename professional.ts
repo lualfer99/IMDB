@@ -1,4 +1,3 @@
-
 export class Professional {
     public name:string;
     public age:number;

@@ -26,9 +26,14 @@ export class Movie
 
     public mostrarDatos():string
     {
+        let a:string = "";
+        for(let i=0;i<this.actors.length;i++){
+            a += this.actors[i].name;
+            
+        }
         
 
-        let datos:string = ("Tittle: " + this.title + 
+                    return  "Tittle: " + this.title + 
                             "\nRelease year: " + this.releaseYear + 
                             "\nActors: " + this.actors+ 
                             "\nNationality: " + this.nationality + 
@@ -40,8 +45,7 @@ export class Movie
                             "\nMain character name: " + this.mainCharacterName + 
                             "\nProducer: " + this.producer + 
                             "\nDistributor: " + this.distributor + 
-                            "\nGenere: " + this.genre);
+                            "\nGenere: " + this.genre;
         
-        return(datos);
     }
 };

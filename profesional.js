@@ -16,42 +16,6 @@ var Professional = /** @class */ (function () {
         this.oscarNumbers = oscarNumbers;
         this.profession = profession;
     }
-    // public getName():string {
-    //     return this.name;
-    // }
-    // public getAge():number {
-    //     return this.age;
-    // }
-    // public getGenre():string {
-    //     return this.genre;
-    // }
-    // public getWeight():number {
-    //     return this.weight;
-    // }
-    // public getHeight():number {
-    //     return this.height;
-    // }
-    // public getHairColor():string {
-    //     return this.hairColor;
-    // }
-    // public getEyeColor():string {
-    //     return this.eyeColor;
-    // }
-    // public getRace():string {
-    //     return this.race;
-    // }
-    // public getIsRetired():boolean {
-    //     return this.isRetired;
-    // }
-    // public getNationality():string {
-    //     return this.nationality;
-    // }
-    // public getOscarNumbers():number {
-    //     return this.oscarNumbers;
-    // }
-    // public getProfession():string {
-    //     return this.profession;
-    // }
     Professional.prototype.toString = function () {
         var texto = "Name: " + this.name + "\n" +
             "Age: " + this.age + "\n" +

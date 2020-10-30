@@ -12,8 +12,9 @@ export class Professional {
     public oscarNumbers:number;
     public profession:string;
     
-    constructor (name:string, age:number, genre:string, weight:number, height:number, hairColor:string, eyeColor:string, race:string, 
-            isRetired:boolean, nationality:string, oscarNumbers:number, profession:string) {
+    constructor (name:string, age:number, genre:string, weight:number, height:number, 
+            hairColor:string, eyeColor:string, race:string, isRetired:boolean, nationality:string, 
+            oscarNumbers:number, profession:string) {
             this.name = name;
             this.age = age;
             this.genre = genre;

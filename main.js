@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var profesional_1 = require("./profesional");
+var actor1 = new profesional_1.Professional("Steve Carrel", 58, "Man", 75, 1.75, "Brown", "Green", "White", false, "American", 0, "Actor");
+var actor2 = new profesional_1.Professional("Joaquin Phoenix", 46, "Man", 71, 1.73, "Brown", "Green", "White", false, "American", 1, "Actor");
+var actor3 = new profesional_1.Professional("Emma Stone", 31, "Woman", 55, 1.68, "Red", "Blue", "White", false, "American", 1, "Actress");
+var actor4 = new profesional_1.Professional("Anne Hathaway", 37, "Woman", 56, 1.70, "Brown", "Blue", "White", false, "American", 1, "Actress");
+actor1.toString();
+actor2.toString();
+actor3.toString();
+actor4.toString();

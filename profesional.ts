@@ -13,7 +13,7 @@ export class Professional {
     public profession:string;
     
     constructor (name:string, age:number, genre:string, weight:number, height:number, hairColor:string, eyeColor:string, race:string, 
-                isRetired:boolean, nationality:string, oscarNumbers:number, profession:string) {
+            isRetired:boolean, nationality:string, oscarNumbers:number, profession:string) {
             this.name = name;
             this.age = age;
             this.genre = genre;
@@ -26,21 +26,21 @@ export class Professional {
             this.nationality = nationality;
             this.oscarNumbers = oscarNumbers;
             this.profession = profession;                 
-            }
-            public toString() {   
-                var texto = "Name: " + this.name + "\n" + 
-                "Age: " + this.age + "\n" + 
-                "Gender: " + this.genre + "\n" +
-                "Weight: " + this.weight + "\n" + 
-                "Height: " + this.height + "\n" +
-                "Hair Color: " + this.hairColor + "\n" + 
-                "Eye Color: " + this.eyeColor + "\n" + 
-                "Race: " + this.race + "\n" + 
-                "Is Retired?: " + this.isRetired + "\n";
-                "Nationality: " + this.nationality + "\n";
-                "Oscar Numbers: " + this.oscarNumbers + "\n";
-                "Profession: " + this.profession + "\n";
-                console.log(texto); 
-            } 
+        }
+        public toString() {   
+            var texto = "Name: " + this.name + "\n" + 
+            "Age: " + this.age + "\n" + 
+            "Gender: " + this.genre + "\n" +
+            "Weight: " + this.weight + "\n" + 
+            "Height: " + this.height + "\n" +
+            "Hair Color: " + this.hairColor + "\n" + 
+            "Eye Color: " + this.eyeColor + "\n" + 
+            "Race: " + this.race + "\n" + 
+            "Is Retired?: " + this.isRetired + "\n";
+            "Nationality: " + this.nationality + "\n";
+            "Oscar Numbers: " + this.oscarNumbers + "\n";
+            "Profession: " + this.profession + "\n";
+            console.log(texto); 
+        } 
 }
 

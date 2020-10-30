@@ -3,6 +3,7 @@ exports.__esModule = true;
 var profesional_1 = require("./profesional");
 var movie_1 = require("./movie");
 var imdb_1 = require("./imdb");
+var fs = require("fs");
 var actor1 = new profesional_1.Professional("Steve Carrel", 58, "Man", 75, 1.75, "Brown", "Green", "White", false, "American", 0, "Actor");
 var actor2 = new profesional_1.Professional("Ryan Gosling", 39, "Man", 80, 1.84, "Blond", "Green", "White", false, "American", 0, "Actor");
 var actor3 = new profesional_1.Professional("Brad Pitt", 55, "Man", 80, 1.84, "Blond", "Blue", "White", false, "American", 2, "Actor");
@@ -59,3 +60,39 @@ var cinesa = new imdb_1.Imdb(totalMovies);
 for (var index = 0; index < cinesa.films.length; index++) {
     cinesa.films[index].mostrarPeliculas();
 }
+console.log("---------------");
+// Convertir a JSON el objeto Imdb.
+var myJson = JSON.stringify(cinesa);
+fs.writeFile("imdbBBDD.json", myJson, function (err, result) {
+    if (err) {
+        console.log("error", err);
+    }
+    else {
+        console.log("Archivo JSON creado!");
+    }
+    ;
+});
+console.log("---------------");
+fs.writeFileSync("imdbBBDD.json", myJson);
+var otroCinesa = new imdb_1.Imdb([]);
+fs.readFileSync("imdbBBDD.json", "utf-8", function (err, result) {
+    if (err) {
+        console.log("error", err);
+    }
+    else {
+        console.log("Your file has been read!");
+        otroCinesa = JSON.parse(result);
+    }
+    ;
+    console.log(otroCinesa.films[2].title);
+});
+console.log("---------------");
+cinesa.escribirEnFicheroJSON("imdbBBDD.json");
+console.log("---------------");
+var object = cinesa.obtenerInstanciaIMDB("imdbBBDD.json");
+console.log("---------------");
+object.obtenerInstanciaIMDB("imdbBBDD.json");
+console.log("---------------");
+console.log(object.films[1].title);
+console.log("---------------");
+cinesa.escribirEnFicheroJSON("hola2.json");

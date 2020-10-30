@@ -1,6 +1,7 @@
 import { Professional } from "./profesional";
 import { Movie } from "./movie";
 import { Imdb } from "./imdb";
+let fs = require ("fs");
 
 let actor1:Professional = new Professional("Steve Carrel", 58, "Man", 75, 1.75, "Brown", "Green", "White", false, "American", 0, "Actor");
 let actor2:Professional = new Professional("Ryan Gosling", 39, "Man", 80, 1.84, "Blond", "Green", "White", false, "American", 0, "Actor");
@@ -75,4 +76,36 @@ for (let index = 0; index < cinesa.films.length; index++) {
     cinesa.films[index].mostrarPeliculas();
 }
 
+console.log("---------------");
 
+// Convertir a JSON el objeto Imdb.
+
+let myJson = JSON.stringify(cinesa);
+
+fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
+        if(err) {console.log("error", err)}
+        else{console.log("Archivo JSON creado!")};
+    })
+
+console.log("---------------");    
+
+fs.writeFileSync("imdbBBDD.json", myJson);
+let otroCinesa:Imdb = new Imdb ([]);
+
+
+fs.readFileSync("imdbBBDD.json", "utf-8", function(err, result) {
+    if(err) {
+        console.log("error", err)
+    } else {
+        console.log("Your file has been read!")
+        otroCinesa = JSON.parse(result)};
+        console.log(otroCinesa.films[2].title);
+})
+
+cinesa.escribirEnFicheroJSON("imdbBBDD.json");
+
+let object:Imdb = cinesa.obtenerInstanciaIMDB("imdbBBDD.json");
+
+object.obtenerInstanciaIMDB("imdbBBDD.json");
+console.log(object.films[1].title);
+cinesa.escribirEnFicheroJSON("hola2.json");

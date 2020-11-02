@@ -4,7 +4,6 @@ var professional_1 = require("./professional");
 var movie_1 = require("./movie");
 var imdb_1 = require("./imdb");
 var fs = require("fs");
-;
 //PROFESSIONALS
 var persona = new professional_1.Professional("Marcos", 28, "Masculino", 70, 167, "Negro", "Marrones", "Amarillo", false, "Española", 0, "Director");
 var persona1 = new professional_1.Professional("Luis", 30, "Masculino", 76, 178, "Blanco", "Verdes", "Americano", true, "Peruana", 4, "Actor");
@@ -32,7 +31,7 @@ var prueba = new imdb_1.Imdb(moovieTotal);
 //Directores, 0,8
 //GUINISTAS, 2,7
 //RELLENAR DATOS DE MOOVIE 1
-moovie1.actors = [persona2, persona2];
+moovie1.actors = [persona1];
 moovie1.director = persona;
 moovie1.writer = persona7;
 moovie1.language = "Spanish";
@@ -78,6 +77,10 @@ moovie4.distributor = "Netflix";
 //     else{console.log("Archivo creado papi")};
 // })
 // fs.writeFileSync("imdbBBDD.json", myJson);
+// Read & Parse
+var readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' });
+var readParseIMBD = JSON.parse(readIMDB);
+console.log(readParseIMBD);
 // let prueba2:Imdb = new Imdb ([]);
 // fs.readFileSync("imdbBBDD.json", "utf-8", function(err, result) {
 //     if(err) {console.log("error", err)}
@@ -86,7 +89,8 @@ moovie4.distributor = "Netflix";
 //     console.log(prueba2.films[2].title);
 // })
 // prueba.escribirEnFicheroJSON("imdbBBDD.json");
-var object = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
-// object.obtenerInstanciaIMDB("imdbBBDD.json"));
+// let object:Imdb = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
+// object.obtenerInstanciaIMDB("imdbBBDD.json");
 // console.log(object.films[1].title);
-prueba.escribirEnFicheroJSON("hola2.json");
+// prueba.escribirEnFicheroJSON("hola2.json")
+// console.log(prueba.films[0].mostrarDatos());

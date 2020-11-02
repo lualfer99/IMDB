@@ -29,11 +29,12 @@ let moovie4:Movie = new Movie("Libranos del Mal", 2014, "Estados Unidos", "Thril
 //TODAS LAS MOOVIES EN UN ARRAY
 let moovieTotal:Movie[] = [moovie1, moovie2, moovie3, moovie4]
 let prueba:Imdb = new Imdb (moovieTotal)
+
 //Actores , 1,3,4,5,6
 //Directores, 0,8
 //GUINISTAS, 2,7
 //RELLENAR DATOS DE MOOVIE 1
-moovie1.actors = [persona2, persona2];
+moovie1.actors = [persona1];
 moovie1.director = persona;
 moovie1.writer = persona7;
 moovie1.language = "Spanish";
@@ -74,7 +75,6 @@ moovie4.producer = "Screen Gems";
 moovie4.distributor = "Netflix";
 
 // console.log(moovie1.mostrarDatos())
-
 // let myJson = JSON.stringify(prueba)
 // fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
 //     if(err) {console.log("error", err)}
@@ -84,22 +84,22 @@ moovie4.distributor = "Netflix";
 
 // fs.writeFileSync("imdbBBDD.json", myJson);
 
+// Read & Parse
 
+let readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' })
 
-// let prueba2:Imdb = new Imdb ([]);
+let readParseIMBD = JSON.parse(readIMDB)
 
-// fs.readFileSync("imdbBBDD.json", "utf-8", function(err, result) {
-//     if(err) {console.log("error", err)}
-//     else{console.log("Your file has been read!")
-//     prueba2 = JSON.parse(result)};
-//     console.log(prueba2.films[2].title);
-// })
+console.log(readParseIMBD)
 
 
 
 // prueba.escribirEnFicheroJSON("imdbBBDD.json");
-let object:Imdb = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
-object.obtenerInstanciaIMDB("imdbBBDD.json");
-console.log(object.films[1].title);
+// let object:Imdb = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
+// object.obtenerInstanciaIMDB("imdbBBDD.json");
+// console.log(object.films[1].title);
 
 // prueba.escribirEnFicheroJSON("hola2.json")
+
+
+// console.log(prueba.films[0].mostrarDatos());

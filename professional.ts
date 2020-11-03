@@ -1,19 +1,18 @@
 export class Professional {
-    public name:string;
-    public age:number;
-    public genere:string;
-    public weight:number;
-    public height:number;
-    public hairColor:string;
-    public eyeColor:string;
-    public race:string;
-    public isRetired:boolean;
-    public nationality:string;
-    public oscarsNumber:number;
-    public profession:string;
+    public name: string;
+    public age: number;
+    public genere: string;
+    public weight: number;
+    public height: number;
+    public hairColor: string;
+    public eyeColor: string;
+    public race: string;
+    public isRetired: boolean;
+    public nationality: string;
+    public oscarsNumber: number;
+    public profession: string;
 
-    constructor(name:string, age:number, genere:string, weight:number, height:number, hairColor:string, eyeColor:string, race:string, isRetired:boolean, nationality:string, oscarsNumber:number, profession:string)
-    {
+    constructor(name: string, age: number, genere: string, weight: number, height: number, hairColor: string, eyeColor: string, race: string, isRetired: boolean, nationality: string, oscarsNumber: number, profession: string) {
         this.name = name;
         this.age = age;
         this.genere = genere;
@@ -29,140 +28,118 @@ export class Professional {
 
     }
 
-    getName():string
-    {
+    getName(): string {
         return this.name;
     }
 
-    setName(name:string)
-    {
+    setName(name: string) {
         this.name = name;
     }
 
-    getAge():number
-    {
+    getAge(): number {
         return this.age;
     }
 
-    setAge(age:number)
-    {
+    setAge(age: number) {
         this.age = age;
     }
 
-    getGenere():string
-    {
+    getGenere(): string {
         return this.genere;
     }
 
-    setGenere(genere:string)
-    {
+    setGenere(genere: string) {
         this.genere = genere;
     }
 
-    getWeight():number
-    {
+    getWeight(): number {
         return this.weight;
     }
 
-    setWeight(weight:number)
-    {
+    setWeight(weight: number) {
         this.weight = weight;
     }
 
-    getHeight():number
-    {
+    getHeight(): number {
         return this.height;
     }
 
-    setHeight(height:number)
-    {
+    setHeight(height: number) {
         this.height = height;
     }
 
-    getHairColor():string
-    {
+    getHairColor(): string {
         return this.hairColor;
     }
 
-    setHairColor(hairColor:string)
-    {
+    setHairColor(hairColor: string) {
         this.hairColor = hairColor;
     }
 
-    getEyeColor():string
-    {
+    getEyeColor(): string {
         return this.eyeColor;
     }
 
-    setEyeColor(eyeColor:string)
-    {
+    setEyeColor(eyeColor: string) {
         this.eyeColor = eyeColor;
     }
 
-    getRace():string
-    {
+    getRace(): string {
         return this.race;
     }
 
-    setRace(race:string)
-    {
+    setRace(race: string) {
         this.race = race;
     }
 
-    getIsRetired():boolean
-    {
+    getIsRetired(): boolean {
         return this.isRetired;
     }
 
-    setIsRetired(isRetired:boolean)
-    {
+    setIsRetired(isRetired: boolean) {
         this.isRetired = isRetired;
     }
 
-    getNationality():string
-    {
+    getNationality(): string {
         return this.nationality;
     }
 
-    setNationality(nationality:string)
-    {
+    setNationality(nationality: string) {
         this.nationality = nationality;
     }
 
-    getOscarsNumber():number
-    {
+    getOscarsNumber(): number {
         return this.oscarsNumber;
     }
 
-    setOscarsNumber(oscarsNumber:number)
-    {
+    setOscarsNumber(oscarsNumber: number) {
         this.oscarsNumber = oscarsNumber;
     }
 
-    getProfession():string
-    {
+    getProfession(): string {
         return this.profession;
     }
 
-    setProfession(profession:string)
-    {
+    setProfession(profession: string) {
         this.profession = profession;
     }
 
-    toString():string
-    {
-        return "Name: " +this.name+
-            "\nAge: " +this.age+
-            "\nGenere: " +this.genere+
-            "\nWeight: " +this.weight+
-            "\nHeight: " +this.height+
-            "\nHairColor: " +this.hairColor+
-            "\nEyeColor: " +this.eyeColor+
-            "\nRace: " +this.race+
-            "\nIsRetired: " +this.isRetired+
-            "\nNationality: " +this.nationality+
-            "\nOscarsNumer: " +this.oscarsNumber+
-            "\nProfession: " +this.profession+ "\n";
+    toString() {
+        let txt1 = "Name: " + this.name +
+            "\nAge: " + this.age +
+            "\nGenere: " + this.genere +
+            "\nWeight: " + this.weight +
+            "\nHeight: " + this.height +
+            "\nHairColor: " + this.hairColor +
+            "\nEyeColor: " + this.eyeColor +
+            "\nRace: " + this.race +
+            "\nIsRetired: " + this.isRetired +
+            "\nNationality: " + this.nationality +
+            "\nOscarsNumer: " + this.oscarsNumber +
+            "\nProfession: " + this.profession + "\n";
+
+        console.log(txt1);
+
     }
 
 

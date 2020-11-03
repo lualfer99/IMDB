@@ -19,7 +19,7 @@ var persona9 = new professional_1.Professional("Juan", 47, "Masculino", 82, 179,
 //TODOS LOS PROFESSIONALS EN UN ARRAY
 var personaTotal = [persona, persona1, persona2, persona3, persona4, persona5, persona6, persona7, persona8, persona9];
 //LLAMAR A TODAS LAS PERSONAS 
-// console.log(personaTotal.toString())
+personaTotal.toString();
 //MOOVIES
 var moovie1 = new movie_1.Movie("El Practicante", 2020, "Española", "Thriller");
 var moovie2 = new movie_1.Movie("Hocus Pocus", 1993, "Estados Unidos", "Fantasia");
@@ -74,17 +74,17 @@ moovie4.isMCU = false;
 moovie4.mainCharacterName = "Eric Bana";
 moovie4.producer = "Screen Gems";
 moovie4.distributor = "Netflix";
-// console.log(moovie1.mostrarDatos())
+moovie1.mostrarDatos();
 // let myJson = JSON.stringify(prueba)
 // fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
 //     if(err) {console.log("error", err)}
 //     else{console.log("Archivo creado papi")};
 // })
 // fs.writeFileSync("imdbBBDD.json", myJson);
-// Read & Parse
-// let readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' })
-// let readParseIMBD = JSON.parse(readIMDB)
-// console.log(readParseIMBD)
+// read parse
+var readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' });
+var readParseIMBD = JSON.parse(readIMDB);
+console.log(readParseIMBD);
 // prueba.escribirEnFicheroJSON("imdbBBDD.json");
 // let object:Imdb = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
 // object.obtenerInstanciaIMDB("imdbBBDD.json");
@@ -99,4 +99,4 @@ moovie4.distributor = "Netflix";
 // let newMovie: Imdb = new Imdb([movieRL])
 //console.log(newMovie)
 // newMovie.escribirEnFicheroJSON("imbdBBDD.JSON")
-console.log(prueba.obtenerInstanciaIMDB("imdbBBDD.json"));
+// console.log(prueba.obtenerInstanciaIMDB("imdbBBDD.json"))

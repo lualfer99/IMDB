@@ -89,7 +89,7 @@ var Professional = /** @class */ (function () {
         this.profession = profession;
     };
     Professional.prototype.toString = function () {
-        return "Name: " + this.name +
+        var txt1 = "Name: " + this.name +
             "\nAge: " + this.age +
             "\nGenere: " + this.genere +
             "\nWeight: " + this.weight +
@@ -101,6 +101,7 @@ var Professional = /** @class */ (function () {
             "\nNationality: " + this.nationality +
             "\nOscarsNumer: " + this.oscarsNumber +
             "\nProfession: " + this.profession + "\n";
+        console.log(txt1);
     };
     return Professional;
 }());

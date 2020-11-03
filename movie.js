@@ -13,9 +13,9 @@ var Movie = /** @class */ (function () {
         for (var i = 0; i < this.actors.length; i++) {
             a += this.actors[i].name;
         }
-        return "Tittle: " + this.title +
+        var txt = "Tittle: " + this.title +
             "\nRelease year: " + this.releaseYear +
-            "\nActors: " + a +
+            "\nActors: " + this.actors +
             "\nNationality: " + this.nationality +
             "\nDirector: " + this.director +
             "\nWriter: " + this.writer +
@@ -26,6 +26,7 @@ var Movie = /** @class */ (function () {
             "\nProducer: " + this.producer +
             "\nDistributor: " + this.distributor +
             "\nGenere: " + this.genre;
+        console.log(txt);
     };
     return Movie;
 }());

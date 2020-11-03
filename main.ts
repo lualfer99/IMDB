@@ -20,7 +20,7 @@ let persona9:Professional = new Professional("Juan", 47, "Masculino", 82, 179, "
 //TODOS LOS PROFESSIONALS EN UN ARRAY
 let personaTotal:Professional[] = [persona, persona1, persona2, persona3, persona4, persona5, persona6, persona7, persona8, persona9];
 //LLAMAR A TODAS LAS PERSONAS 
-// console.log(personaTotal.toString())
+personaTotal.toString()
 
 //MOOVIES
 let moovie1:Movie = new Movie("El Practicante", 2020, "Española", "Thriller");
@@ -79,7 +79,7 @@ moovie4.mainCharacterName = "Eric Bana";
 moovie4.producer = "Screen Gems";
 moovie4.distributor = "Netflix";
 
-// console.log(moovie1.mostrarDatos())
+moovie1.mostrarDatos()
 // let myJson = JSON.stringify(prueba)
 // fs.writeFile("imdbBBDD.json", myJson, function(err, result) {
 //     if(err) {console.log("error", err)}
@@ -89,13 +89,13 @@ moovie4.distributor = "Netflix";
 
 // fs.writeFileSync("imdbBBDD.json", myJson);
 
-// Read & Parse
+// read parse
 
-// let readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' })
+let readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' })
 
-// let readParseIMBD = JSON.parse(readIMDB)
+let readParseIMBD = JSON.parse(readIMDB)
 
-// console.log(readParseIMBD)
+console.log(readParseIMBD)
 
 
 
@@ -121,4 +121,4 @@ moovie4.distributor = "Netflix";
 
 
 // newMovie.escribirEnFicheroJSON("imbdBBDD.JSON")
-console.log(prueba.obtenerInstanciaIMDB("imdbBBDD.json"))
+// console.log(prueba.obtenerInstanciaIMDB("imdbBBDD.json"))

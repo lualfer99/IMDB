@@ -35,7 +35,7 @@ export class Movie
 
                     return  "Tittle: " + this.title + 
                             "\nRelease year: " + this.releaseYear + 
-                            "\nActors: " + this.actors+ 
+                            "\nActors: " + a + 
                             "\nNationality: " + this.nationality + 
                             "\nDirector: " + this.director + 
                             "\nWriter: " + this.writer+ 

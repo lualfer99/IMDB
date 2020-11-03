@@ -4,6 +4,7 @@ var professional_1 = require("./professional");
 var movie_1 = require("./movie");
 var imdb_1 = require("./imdb");
 var fs = require("fs");
+var readline = require('readline');
 //PROFESSIONALS
 var persona = new professional_1.Professional("Marcos", 28, "Masculino", 70, 167, "Negro", "Marrones", "Amarillo", false, "Española", 0, "Director");
 var persona1 = new professional_1.Professional("Luis", 30, "Masculino", 76, 178, "Blanco", "Verdes", "Americano", true, "Peruana", 4, "Actor");
@@ -27,6 +28,9 @@ var moovie4 = new movie_1.Movie("Libranos del Mal", 2014, "Estados Unidos", "Thr
 //TODAS LAS MOOVIES EN UN ARRAY
 var moovieTotal = [moovie1, moovie2, moovie3, moovie4];
 var prueba = new imdb_1.Imdb(moovieTotal);
+var actores1 = [persona1.name, persona3.name];
+var actores2 = [persona4.name, persona5.name];
+var actores3 = [persona1.name, persona6.name];
 //Actores , 1,3,4,5,6
 //Directores, 0,8
 //GUINISTAS, 2,7
@@ -78,19 +82,21 @@ moovie4.distributor = "Netflix";
 // })
 // fs.writeFileSync("imdbBBDD.json", myJson);
 // Read & Parse
-var readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' });
-var readParseIMBD = JSON.parse(readIMDB);
-console.log(readParseIMBD);
-// let prueba2:Imdb = new Imdb ([]);
-// fs.readFileSync("imdbBBDD.json", "utf-8", function(err, result) {
-//     if(err) {console.log("error", err)}
-//     else{console.log("Your file has been read!")
-//     prueba2 = JSON.parse(result)};
-//     console.log(prueba2.films[2].title);
-// })
+// let readIMDB = fs.readFileSync("imdbBBDD.json", { encoding: 'utf-8', flag: 'r' })
+// let readParseIMBD = JSON.parse(readIMDB)
+// console.log(readParseIMBD)
 // prueba.escribirEnFicheroJSON("imdbBBDD.json");
 // let object:Imdb = prueba.obtenerInstanciaIMDB("imdbBBDD.json");
 // object.obtenerInstanciaIMDB("imdbBBDD.json");
 // console.log(object.films[1].title);
 // prueba.escribirEnFicheroJSON("hola2.json")
-// console.log(prueba.films[0].mostrarDatos());
+// Guardar en fichero JSON
+// let title = rl.question("Which is the movie title? ");
+// let releaseYear = rl.question("When did the movie came out? ")
+// let nationality = rl.question("Which is the country of origin? ")
+// let genre = rl.question("Which is the movie genre? ")
+// let movieRL: Movie = new Movie(title, releaseYear, nationality, genre)
+// let newMovie: Imdb = new Imdb([movieRL])
+//console.log(newMovie)
+// newMovie.escribirEnFicheroJSON("imbdBBDD.JSON")
+console.log(prueba.obtenerInstanciaIMDB("imdbBBDD.json"));
